@@ -1,4 +1,6 @@
 import 'package:bookapp/controller/authentication_controller/signup_controller.dart';
+import 'package:bookapp/controller/user_controller/user_controller.dart';
+import 'package:bookapp/model/user_model.dart/user_model.dart';
 import 'package:bookapp/view/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -103,19 +105,19 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin {
                   onPressed: () async {
                     try {
                       if (_formKey.currentState!.validate()) {
-                        // if (isSignup) {
-                        //   final user = UserModel(
-                        //       email: controller.email.text.trim(),
-                        //       name: controller.name.text.trim(),
-                        //       password: controller.password.text.trim());
+                        if (isSignup) {
+                          final user = UserModel(
+                              email: controller.email.text.trim(),
+                              name: controller.name.text.trim(),
+                              password: controller.password.text.trim());
 
-                        //   SignUpController.intstance
-                        //       .registerUser(user.email, user.password);
-                        //   UserController.instance.creatUser(user);
-                        // } else {
-                        //   SignUpController.intstance.loginUser(
-                        //       controller.email.text, controller.password.text);
-                        // }
+                          SignUpController.intstance
+                              .registerUser(user.email, user.password);
+                          UserController.instance.creatUser(user);
+                        } else {
+                          SignUpController.intstance.loginUser(
+                              controller.email.text, controller.password.text);
+                        }
                         //   // await signup();
                         //   // showMessage(
                         //   // 'Account created successfully!', Colors.green);
