@@ -29,12 +29,12 @@ class MenuScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
+          const Text(
             "Badusha",
             overflow: TextOverflow.clip,
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 50),
           ),
-          SizedBox(height: 25),
+          const SizedBox(height: 25),
           Column(
             children: drawerItems
                 .map((e) => ListTile(
