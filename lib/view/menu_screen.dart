@@ -46,7 +46,7 @@ class MenuScreen extends StatelessWidget {
                     ))
                 .toList(),
           ),
-          SizedBox(height: 25),
+          const SizedBox(height: 25),
           ElevatedButton(
             onPressed: () async {
               // Firebase sign-out code
@@ -61,13 +61,13 @@ class MenuScreen extends StatelessWidget {
               //   (route) => false,
               // );
             },
-            child: Text("Sign Out"),
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.red, // Red color
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20.0),
               ),
             ),
+            child: const Text("Sign Out"),
           ),
         ],
       ),

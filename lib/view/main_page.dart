@@ -83,8 +83,8 @@ class MainPage extends StatelessWidget {
                             ),
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
+                        const Padding(
+                          padding: EdgeInsets.all(8.0),
                           child: Text(
                             '\$20.00', // Replace with actual price
                             style: TextStyle(
