@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../utils/color.dart';
 
+// ignore: must_be_immutable
 class MyBackground extends StatelessWidget {
   Widget? child;
   MyBackground({super.key, required this.child});
