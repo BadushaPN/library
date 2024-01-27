@@ -29,7 +29,7 @@ class MenuScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
+          const Text(
             "Badusha",
             overflow: TextOverflow.clip,
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 50),
